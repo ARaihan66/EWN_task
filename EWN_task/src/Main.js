@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from "react-bootstrap-table2-paginator";
+import propTypes, { array } from 'prop-types';
 
 const Main = () => {
     const [data, setData] = useState([]);
@@ -58,6 +59,11 @@ const Main = () => {
             />
         </div>
     )
+}
+
+Main.propTypes = {
+    data: propTypes.arrayOf(propTypes.object),
+    err: propTypes.string
 }
 
 export default Main
