@@ -49,7 +49,6 @@ const Main = () => {
                 hover
                 condensed
                 pagination={paginationFactory()}
-                selectRow={selectRow}
             />
         </div>
     )
