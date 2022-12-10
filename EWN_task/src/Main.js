@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from "react-bootstrap-table2-paginator";
 
 const Main = () => {
     const [data, setData] = useState([]);
@@ -39,7 +41,16 @@ const Main = () => {
 
     return (
         <div>
-
+            <BootstrapTable
+                keyField="id"
+                data={data}
+                columns={columns}
+                striped
+                hover
+                condensed
+                pagination={paginationFactory()}
+                selectRow={selectRow}
+            />
         </div>
     )
 }
