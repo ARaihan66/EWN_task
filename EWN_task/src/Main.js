@@ -24,6 +24,11 @@ const Main = () => {
     }
     ]
 
+    const selectRow = {
+        mode: "checkbox",
+        clickToSelect: true
+    }
+
     useEffect(() => {
         getData();
     }, [])
@@ -49,6 +54,7 @@ const Main = () => {
                 hover
                 condensed
                 pagination={paginationFactory()}
+                selectRow={selectRow}
             />
         </div>
     )
